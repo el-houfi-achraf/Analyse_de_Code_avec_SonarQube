@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Student.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Student Project</a> &gt; <a href="index.source.html" class="el_package">com.example</a> &gt; <span class="el_source">Student.java</span></div><h1>Student.java</h1><pre class="source lang-java linenums">package com.example;
+
+/**
+ * Classe représentant un étudiant
+ * Cette classe contient volontairement quelques &quot;code smells&quot; 
+ * pour démontrer l'analyse SonarQube
+ */
+public class Student {
+    
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private int age;
+    private double grade;
+
+    // Constructeur par défaut
+<span class="nc" id="L18">    public Student() {</span>
+<span class="nc" id="L19">    }</span>
+
+    // Constructeur avec paramètres
+<span class="fc" id="L22">    public Student(Long id, String firstName, String lastName, String email, int age) {</span>
+<span class="fc" id="L23">        this.id = id;</span>
+<span class="fc" id="L24">        this.firstName = firstName;</span>
+<span class="fc" id="L25">        this.lastName = lastName;</span>
+<span class="fc" id="L26">        this.email = email;</span>
+<span class="fc" id="L27">        this.age = age;</span>
+<span class="fc" id="L28">    }</span>
+
+    // Getters et Setters
+    public Long getId() {
+<span class="fc" id="L32">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="nc" id="L36">        this.id = id;</span>
+<span class="nc" id="L37">    }</span>
+
+    public String getFirstName() {
+<span class="fc" id="L40">        return firstName;</span>
+    }
+
+    public void setFirstName(String firstName) {
+<span class="fc" id="L44">        this.firstName = firstName;</span>
+<span class="fc" id="L45">    }</span>
+
+    public String getLastName() {
+<span class="fc" id="L48">        return lastName;</span>
+    }
+
+    public void setLastName(String lastName) {
+<span class="fc" id="L52">        this.lastName = lastName;</span>
+<span class="fc" id="L53">    }</span>
+
+    public String getEmail() {
+<span class="fc" id="L56">        return email;</span>
+    }
+
+    public void setEmail(String email) {
+<span class="fc" id="L60">        this.email = email;</span>
+<span class="fc" id="L61">    }</span>
+
+    public int getAge() {
+<span class="fc" id="L64">        return age;</span>
+    }
+
+    public void setAge(int age) {
+<span class="fc" id="L68">        this.age = age;</span>
+<span class="fc" id="L69">    }</span>
+
+    public double getGrade() {
+<span class="fc" id="L72">        return grade;</span>
+    }
+
+    public void setGrade(double grade) {
+<span class="fc" id="L76">        this.grade = grade;</span>
+<span class="fc" id="L77">    }</span>
+
+    /**
+     * Retourne le nom complet de l'étudiant
+     */
+    public String getFullName() {
+<span class="fc" id="L83">        return firstName + &quot; &quot; + lastName;</span>
+    }
+
+    /**
+     * Vérifie si l'étudiant est majeur
+     */
+    public boolean isAdult() {
+<span class="fc bfc" id="L90" title="All 2 branches covered.">        return age &gt;= 18;</span>
+    }
+
+    /**
+     * Vérifie si l'étudiant a réussi (note &gt;= 10)
+     */
+    public boolean hasPassed() {
+<span class="fc bfc" id="L97" title="All 2 branches covered.">        return grade &gt;= 10.0;</span>
+    }
+
+    /**
+     * Calcule la mention selon la note
+     * Code smell intentionnel : méthode complexe avec magic numbers
+     */
+    public String getMention() {
+<span class="fc bfc" id="L105" title="All 2 branches covered.">        if (grade &gt;= 16) {</span>
+<span class="fc" id="L106">            return &quot;Très Bien&quot;;</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">        } else if (grade &gt;= 14) {</span>
+<span class="fc" id="L108">            return &quot;Bien&quot;;</span>
+<span class="fc bfc" id="L109" title="All 2 branches covered.">        } else if (grade &gt;= 12) {</span>
+<span class="fc" id="L110">            return &quot;Assez Bien&quot;;</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">        } else if (grade &gt;= 10) {</span>
+<span class="fc" id="L112">            return &quot;Passable&quot;;</span>
+        } else {
+<span class="fc" id="L114">            return &quot;Ajourné&quot;;</span>
+        }
+    }
+
+    /**
+     * Valide l'email - exemple de code avec potentiel bug
+     */
+    public boolean isValidEmail() {
+        // Bug potentiel : ne vérifie pas si email est null
+<span class="pc bpc" id="L123" title="1 of 4 branches missed.">        return email.contains(&quot;@&quot;) &amp;&amp; email.contains(&quot;.&quot;);</span>
+    }
+
+    /**
+     * Méthode avec duplication intentionnelle (code smell)
+     */
+    public String getFormattedInfo() {
+<span class="fc" id="L130">        String info = &quot;&quot;;</span>
+<span class="fc" id="L131">        info = info + &quot;ID: &quot; + id + &quot;\n&quot;;</span>
+<span class="fc" id="L132">        info = info + &quot;Nom: &quot; + firstName + &quot; &quot; + lastName + &quot;\n&quot;;</span>
+<span class="fc" id="L133">        info = info + &quot;Email: &quot; + email + &quot;\n&quot;;</span>
+<span class="fc" id="L134">        info = info + &quot;Age: &quot; + age + &quot;\n&quot;;</span>
+<span class="fc" id="L135">        info = info + &quot;Note: &quot; + grade + &quot;\n&quot;;</span>
+<span class="fc" id="L136">        return info;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L141">        return &quot;Student{&quot; +</span>
+                &quot;id=&quot; + id +
+                &quot;, firstName='&quot; + firstName + '\'' +
+                &quot;, lastName='&quot; + lastName + '\'' +
+                &quot;, email='&quot; + email + '\'' +
+                &quot;, age=&quot; + age +
+                &quot;, grade=&quot; + grade +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

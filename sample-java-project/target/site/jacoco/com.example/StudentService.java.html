@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Student Project</a> &gt; <a href="index.source.html" class="el_package">com.example</a> &gt; <span class="el_source">StudentService.java</span></div><h1>StudentService.java</h1><pre class="source lang-java linenums">package com.example;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * Service de gestion des étudiants
+ * Contient volontairement quelques problèmes de code pour démontrer SonarQube
+ */
+public class StudentService {
+
+    private List&lt;Student&gt; students;
+
+<span class="fc" id="L15">    public StudentService() {</span>
+<span class="fc" id="L16">        this.students = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L17">    }</span>
+
+    /**
+     * Ajoute un étudiant à la liste
+     */
+    public void addStudent(Student student) {
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (student != null) {</span>
+<span class="fc" id="L24">            students.add(student);</span>
+        }
+<span class="fc" id="L26">    }</span>
+
+    /**
+     * Recherche un étudiant par ID
+     */
+    public Optional&lt;Student&gt; findById(Long id) {
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (Student student : students) {</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            if (student.getId().equals(id)) {</span>
+<span class="fc" id="L34">                return Optional.of(student);</span>
+            }
+<span class="fc" id="L36">        }</span>
+<span class="fc" id="L37">        return Optional.empty();</span>
+    }
+
+    /**
+     * Recherche des étudiants par nom
+     */
+    public List&lt;Student&gt; findByLastName(String lastName) {
+<span class="fc" id="L44">        List&lt;Student&gt; result = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (Student student : students) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            if (student.getLastName().equalsIgnoreCase(lastName)) {</span>
+<span class="fc" id="L47">                result.add(student);</span>
+            }
+<span class="fc" id="L49">        }</span>
+<span class="fc" id="L50">        return result;</span>
+    }
+
+    /**
+     * Retourne tous les étudiants
+     */
+    public List&lt;Student&gt; getAllStudents() {
+<span class="fc" id="L57">        return new ArrayList&lt;&gt;(students);</span>
+    }
+
+    /**
+     * Supprime un étudiant par ID
+     */
+    public boolean removeStudent(Long id) {
+<span class="fc" id="L64">        return students.removeIf(s -&gt; s.getId().equals(id));</span>
+    }
+
+    /**
+     * Calcule la moyenne des notes
+     * Code smell : variable inutilisée
+     */
+    public double calculateAverageGrade() {
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        if (students.isEmpty()) {</span>
+<span class="fc" id="L73">            return 0.0;</span>
+        }
+        
+<span class="fc" id="L76">        int unusedVariable = 0; // Code smell intentionnel</span>
+<span class="fc" id="L77">        double sum = 0.0;</span>
+        
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        for (Student student : students) {</span>
+<span class="fc" id="L80">            sum += student.getGrade();</span>
+<span class="fc" id="L81">        }</span>
+        
+<span class="fc" id="L83">        return sum / students.size();</span>
+    }
+
+    /**
+     * Compte les étudiants qui ont réussi
+     */
+    public int countPassedStudents() {
+<span class="fc" id="L90">        int count = 0;</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        for (Student student : students) {</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">            if (student.hasPassed()) {</span>
+<span class="fc" id="L93">                count++;</span>
+            }
+<span class="fc" id="L95">        }</span>
+<span class="fc" id="L96">        return count;</span>
+    }
+
+    /**
+     * Compte les étudiants majeurs
+     */
+    public int countAdultStudents() {
+<span class="fc" id="L103">        int count = 0;</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">        for (Student student : students) {</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">            if (student.isAdult()) {</span>
+<span class="fc" id="L106">                count++;</span>
+            }
+<span class="fc" id="L108">        }</span>
+<span class="fc" id="L109">        return count;</span>
+    }
+
+    /**
+     * Méthode avec complexité cyclomatique élevée (code smell)
+     */
+    public String getStudentCategory(Student student) {
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        if (student == null) {</span>
+<span class="fc" id="L117">            return &quot;UNKNOWN&quot;;</span>
+        }
+        
+<span class="fc" id="L120">        String category = &quot;&quot;;</span>
+        
+<span class="fc bfc" id="L122" title="All 2 branches covered.">        if (student.getAge() &lt; 18) {</span>
+<span class="pc bpc" id="L123" title="1 of 2 branches missed.">            if (student.getGrade() &gt;= 16) {</span>
+<span class="fc" id="L124">                category = &quot;YOUNG_EXCELLENT&quot;;</span>
+<span class="nc bnc" id="L125" title="All 2 branches missed.">            } else if (student.getGrade() &gt;= 14) {</span>
+<span class="nc" id="L126">                category = &quot;YOUNG_GOOD&quot;;</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">            } else if (student.getGrade() &gt;= 10) {</span>
+<span class="nc" id="L128">                category = &quot;YOUNG_AVERAGE&quot;;</span>
+            } else {
+<span class="nc" id="L130">                category = &quot;YOUNG_FAILING&quot;;</span>
+            }
+<span class="pc bpc" id="L132" title="1 of 2 branches missed.">        } else if (student.getAge() &lt;= 25) {</span>
+<span class="pc bpc" id="L133" title="1 of 2 branches missed.">            if (student.getGrade() &gt;= 16) {</span>
+<span class="nc" id="L134">                category = &quot;ADULT_EXCELLENT&quot;;</span>
+<span class="pc bpc" id="L135" title="1 of 2 branches missed.">            } else if (student.getGrade() &gt;= 14) {</span>
+<span class="fc" id="L136">                category = &quot;ADULT_GOOD&quot;;</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">            } else if (student.getGrade() &gt;= 10) {</span>
+<span class="nc" id="L138">                category = &quot;ADULT_AVERAGE&quot;;</span>
+            } else {
+<span class="nc" id="L140">                category = &quot;ADULT_FAILING&quot;;</span>
+            }
+        } else {
+<span class="nc bnc" id="L143" title="All 2 branches missed.">            if (student.getGrade() &gt;= 16) {</span>
+<span class="nc" id="L144">                category = &quot;SENIOR_EXCELLENT&quot;;</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">            } else if (student.getGrade() &gt;= 14) {</span>
+<span class="nc" id="L146">                category = &quot;SENIOR_GOOD&quot;;</span>
+<span class="nc bnc" id="L147" title="All 2 branches missed.">            } else if (student.getGrade() &gt;= 10) {</span>
+<span class="nc" id="L148">                category = &quot;SENIOR_AVERAGE&quot;;</span>
+            } else {
+<span class="nc" id="L150">                category = &quot;SENIOR_FAILING&quot;;</span>
+            }
+        }
+        
+<span class="fc" id="L154">        return category;</span>
+    }
+
+    /**
+     * Retourne le nombre total d'étudiants
+     */
+    public int getTotalStudents() {
+<span class="fc" id="L161">        return students.size();</span>
+    }
+
+    /**
+     * Vide la liste des étudiants
+     */
+    public void clear() {
+<span class="fc" id="L168">        students.clear();</span>
+<span class="fc" id="L169">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

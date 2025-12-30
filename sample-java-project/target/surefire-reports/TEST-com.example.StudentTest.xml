@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.StudentTest" time="0.086" tests="14" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ACHRAF\Desktop\-_-\ARC\TP28\sample-java-project\target\test-classes;C:\Users\ACHRAF\Desktop\-_-\ARC\TP28\sample-java-project\target\classes;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\ACHRAF\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Casablanca"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\ACHRAF\AppData\Local\Temp\surefire16549304538854277612\surefirebooter-20251230023004134_3.jar C:\Users\ACHRAF\AppData\Local\Temp\surefire16549304538854277612 2025-12-30T02-30-03_901-jvmRun1 surefire-20251230023004134_1tmp surefire_0-20251230023004134_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\ACHRAF\Desktop\-_-\ARC\TP28\sample-java-project\target\test-classes;C:\Users\ACHRAF\Desktop\-_-\ARC\TP28\sample-java-project\target\classes;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\ACHRAF\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\ACHRAF\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ACHRAF"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\ACHRAF\Desktop\-_-\ARC\TP28\sample-java-project"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\ACHRAF\AppData\Local\Temp\surefire16549304538854277612\surefirebooter-20251230023004134_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
+    <property name="user.name" value="ACHRAF"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\ACHRAF\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\ACHRAF\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="C:\Users\ACHRAF\Desktop\-_-\ARC\TP28\sample-java-project"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\ACHRAF\flutter\bin\cache\dart-sdk\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;c:\Users\ACHRAF\AppData\Local\Programs\cursor\resources\app\bin;C:\APP\Admin\db_home\bin;C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;D:\app\oracle\product\11.2.0\server\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\php-8.0.28;C:\ProgramData\ComposerSetup\bin;C:\xampp\php;C:\Users\ACHRAF\AppData\Roaming\Python\Python310\Scripts;D:\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\nodejs\;C:\Users\ACHRAF\AppData\Roaming\npm;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\ACHRAF\AppData\Local\Microsoft\WindowsApps;C:\Users\ACHRAF\AppData\Roaming\Composer\vendor;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Java\jdk-11\bin;C:\Spark\spark-3.5.5-bin-hadoop3\spark-3.5.5-bin-hadoop3\bin;C:\Hadoop\hadoop-3.2.0\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\RedHat\Podman\;D:\sonar-scanner-7.3.0.5189-windows-x64\bin;D:\apache-jmeter-5.6.3\bin;C:\Program Files\PostgreSQL\18\bin;C:\Users\ACHRAF\AppData\Roaming\npm;C:\Users\ACHRAF\AppData\Local\Pub\Cache\bin;C:\Program Files\apache-maven-3.9.11\bin;C:\ngrok.exe;C:\Program Files\Common Files\Oracle\Java\javapath;c:\Users\ACHRAF\AppData\Local\Programs\cursor\resources\app\bin;C:\APP\Admin\db_home\bin;C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;D:\app\oracle\product\11.2.0\server\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\php-8.0.28;C:\ProgramData\ComposerSetup\bin;C:\xampp\php;C:\Users\ACHRAF\AppData\Roaming\Python\Python310\Scripts;D:\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\nodejs\;C:\Users\ACHRAF\AppData\Roaming\npm;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\ACHRAF\AppData\Local\Microsoft\WindowsApps;C:\Users\ACHRAF\AppData\Roaming\Composer\vendor;C:\;C:\Users\ACHRAF\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ACHRAF\flutter\bin;D:\apache-jmeter-5.6.3\bin;C:\Users\ACHRAF\AppData\Local\Programs\Antigravity\bin;C:\Users\ACHRAF\AppData\Local\Programs\Ollama;c:\Users\ACHRAF\.antigravity\extensions\vscjava.vscode-java-debug-0.58.4-universal\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.9+7-LTS-338"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testGetFullName" classname="com.example.StudentTest" time="0.011"/>
+  <testcase name="testToString" classname="com.example.StudentTest" time="0.018"/>
+  <testcase name="testValidEmail" classname="com.example.StudentTest" time="0.001"/>
+  <testcase name="testConstructorAndGetters" classname="com.example.StudentTest" time="0.001"/>
+  <testcase name="testMentionAssezBien" classname="com.example.StudentTest" time="0.001"/>
+  <testcase name="testMentionBien" classname="com.example.StudentTest" time="0.002"/>
+  <testcase name="testMentionAjourne" classname="com.example.StudentTest" time="0.003"/>
+  <testcase name="testHasPassed" classname="com.example.StudentTest" time="0.002"/>
+  <testcase name="testGetFormattedInfo" classname="com.example.StudentTest" time="0.016"/>
+  <testcase name="testMentionPassable" classname="com.example.StudentTest" time="0.005"/>
+  <testcase name="testMentionTresBien" classname="com.example.StudentTest" time="0.001"/>
+  <testcase name="testInvalidEmail" classname="com.example.StudentTest" time="0.001"/>
+  <testcase name="testSetters" classname="com.example.StudentTest" time="0.003"/>
+  <testcase name="testIsAdult" classname="com.example.StudentTest" time="0.001"/>
+</testsuite>
