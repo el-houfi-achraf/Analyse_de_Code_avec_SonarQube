@@ -1,4 +1,4 @@
-# TP28 - Analyse de Code avec SonarQube
+# Analyse de Code avec SonarQube
 
 ## 🎯 Objectif de l'activité
 
